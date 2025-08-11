@@ -17,7 +17,7 @@
     },
     size: {
       type: String as PropType<ButtonSize>,
-      default: ButtonSize.REGULAR,
+      default: ButtonSize.L,
     },
     prependIcon: {
       type: String,
@@ -30,4 +30,6 @@
   });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  @import '@/styles/colors.scss';
+</style>

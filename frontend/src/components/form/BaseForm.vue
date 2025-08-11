@@ -2,7 +2,7 @@
   <v-form v-model="model">
     <v-container>
       <slot name="default"></slot>
-      <PrimaryButton :text="submitText" />
+      <PrimaryButton v-if="!hideButton" :text="submitText" />
     </v-container>
   </v-form>
 </template>
@@ -13,11 +13,15 @@
   defineProps({
     submitText: {
       type: String,
-      required: true,
+      default: undefined,
+    },
+    hideButton: {
+      type: Boolean,
+      default: false,
     },
   });
 
-  const model = defineModel();
+  const model = defineModel<boolean>();
 </script>
 
 <style lang="scss"></style>

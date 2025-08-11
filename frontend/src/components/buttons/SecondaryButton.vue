@@ -1,6 +1,6 @@
 <template>
   <BaseButton
-    class="primary-button"
+    class="secondary-button"
     :text="text"
     :prepend-icon="prependIcon"
     :append-icon="appendIcon"
@@ -40,9 +40,9 @@
 <style lang="scss">
   @import '@/styles/colors.scss';
 
-  .primary-button {
-    color: $accent;
-    background-color: $primary;
+  .secondary-button {
+    color: $secondary;
+    background-color: $accent;
     font-weight: bold;
   }
 </style>
